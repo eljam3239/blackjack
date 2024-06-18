@@ -1,0 +1,13 @@
+For console blackjack:
+1. set up the deck
+2. shuffle deck
+3. deal initial cards
+4. hit/stand
+5. deal the dealer
+6. calculate winner
+
+For gui blackjack:
+1. pygame?
+
+for webapp blackjack:
+1. typescript?

@@ -22,3 +22,27 @@ def card_value(card):
 random.shuffle(deck)
 player_card = [deck.pop(), deck.pop()]
 dealer_card = [deck.pop(), deck.pop()]
+
+while True:
+    player_score = sum(card_value(card) for card in player_card)
+    dealer_score = sum(card_value(card) for card in dealer_card)
+    print("Cards Player Has:", player_card)
+    print("Score Of The Player:", player_score)
+    print("\n")
+    choice = input('What do you want? ["play" to request another card, "stop" to stop]: ').lower()
+    if choice == "play":
+        new_card = deck.pop()
+        player_card.append(new_card)
+    elif choice == "stop":
+        break
+    else:
+        print("Invalid choice. Please try again.")
+        continue
+
+    if player_score > 21:
+        print("Cards Dealer Has:", dealer_card)
+        print("Score Of The Dealer:", dealer_score)
+        print("Cards Player Has:", player_card)
+        print("Score Of The Player:", player_score)
+        print("Dealer wins (Player Loss Because Player Score is exceeding 21)")
+        break

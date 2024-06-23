@@ -46,3 +46,11 @@ while True:
         print("Score Of The Player:", player_score)
         print("Dealer wins (Player Loss Because Player Score is exceeding 21)")
         break
+while dealer_score < 17:
+    new_card = deck.pop()
+    dealer_card.append(new_card)
+    dealer_score += card_value(new_card)
+
+print("Cards Dealer Has:", dealer_card)
+print("Score Of The Dealer:", dealer_score)
+print("\n")
